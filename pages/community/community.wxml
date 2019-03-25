@@ -1,0 +1,9 @@
+<!--pages/community/community.wxml-->
+<view class='community'>
+  <navigation title="社区活动" searchValue="false"></navigation>
+  <view class='community_box'>
+    <block wx:for="{{ communityData }}" wx:key="index">
+      <communityList dataValue="{{ item }}"></communityList>
+    </block>
+  </view>
+</view>

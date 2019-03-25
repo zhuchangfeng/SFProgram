@@ -1,0 +1,69 @@
+/* pages/forum/forum.wxss */
+
+.forum {
+  background-color: #fff;
+  width: 100%;
+}
+
+.forum_box {
+  padding-top: 106px;
+}
+
+.forum .forum_content {
+  padding: 20rpx 0 20rpx 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.forum_content .forum_content_swiper {
+  width: 100%;
+  height: 370rpx;
+}
+
+.forum .forum_searchBar {
+  width: 100%;
+  padding: 80rpx 20rpx;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+}
+
+.forum_searchBar .forum_searchBar_item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+}
+
+.forum_searchBar_item .forum_searchBar_item_icon {
+  width: 100rpx;
+  height: 100rpx;
+  margin-bottom: 40rpx;
+}
+
+.forum_searchBar_item_icon image {
+  width: 100%;
+  height: 100%;
+}
+
+.forum_searchBar_item .forum_searchBar_item_text {
+  font-size: 32rpx;
+}
+
+.forum .forum_title_box {
+  padding: 0 35rpx;
+  box-sizing: border-box;
+  margin-bottom: 70rpx;
+}
+
+.forum_title_box .forum_title_box_text {
+  border-left: 10rpx solid #24a071;
+  padding-left: 30rpx;
+  font-size: 34rpx;
+  font-weight: bold;
+}
+
+.forum .forum_courses {
+  padding: 0 35rpx;
+  box-sizing: border-box;
+}

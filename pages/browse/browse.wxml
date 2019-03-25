@@ -1,0 +1,9 @@
+<!--pages/browse/browse.wxml-->
+<view class='browse'>
+  <navigation title="最近浏览"></navigation>
+  <view class='browse_box'>
+    <block wx:for="{{ articleData }}" wx:key="index">
+      <article dataValue="{{item}}"></article>
+    </block>
+  </view>
+</view>

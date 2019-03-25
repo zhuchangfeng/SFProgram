@@ -1,0 +1,44 @@
+<!--component/homeModule/homeModule.wxml-->
+<view class='homeModule'>
+  <view class='homeModule_title'>
+    <text>来自标签</text>
+    <view class='homeModule_title_label'>
+      <text>vue.js</text>
+    </view>
+  </view>
+  <view class='homeModule_title_box'>
+    <view class='homeModule_title_box_details'>
+      <view class='homeModule_title_box_details_title'>
+        <text>Vue的table组件</text>
+      </view>
+      <view class='homeModule_title_box_details_content Tline'>
+        <text>ashdfaskfhaskfhasaskfsfaskfhaskfhaskashkffjasiofjasojfasoijhkasfjh</text>
+      </view>
+    </view>
+    <view class='homeModule_title_box_image'>
+      <image src='https://live-static.segmentfault.com/960/643/960643691-5b769e3115c06_render'></image>
+    </view>
+  </view>
+  <view class='homeModule_title_info'>
+    <view class='homeModule_title_info_details'>
+      <view class='homeModule_title_info_details_t'>
+        <view class='homeModule_title_info_details_t_author'>
+          <text>小米</text>发表了文章
+        </view>
+      </view>
+      <view class='homeModule_title_info_details_b'>
+        <view class='homeModule_title_info_details_b_time'>
+          <text>18</text> 分钟前-
+        </view>
+        <view class='homeModule_title_info_details_b_agree'>
+          <text>13</text>赞同
+        </view>
+      </view>
+    </view>
+    <view class='homeModule_title_info_collection'>
+      <view class='homeModule_title_info_collection_image'>
+        <image src='./image/label.svg'></image>
+      </view>
+    </view>
+  </view>
+</view>

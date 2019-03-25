@@ -1,0 +1,40 @@
+<!--pages/detailed/detailed.wxml-->
+<view class='detailed'>
+  <navigation title="详细资料" top="{{ scrollTop }}" ></navigation>
+  <view class='detailed_box'>
+    <!-- 所在的城市 -->
+    <view class='detailed_common'>
+      <text>所在城市</text>
+      <view class='detailed_city_name'>
+        <text>广州</text>
+      </view>
+    </view>
+    <!-- 所在的城市 end-->
+    <!-- 擅长技能 -->
+    <view class='detailed_common'>
+      <text>擅长技能</text>
+      <view class='detailed_skill_box'>
+        <view class='detailed_skill_item'>
+          <text>微信小程序</text>
+        </view>
+        <view class='detailed_skill_item'>
+          <text>vue.js</text>
+        </view>
+      </view>
+    </view>
+    <!-- 擅长技能 end-->
+    <!-- 各种经历(学习、工作、项目) -->
+    <block wx:for="{{ experienceData }}" wx:key="index">
+      <view class='detailed_common'>
+        <text>{{ item.title }}</text>
+        <view class='detailed_common_box'>
+          <text>{{ item.content }}</text>
+          <view class='detailed_common_box_text'>
+            <text class='Tline'>{{ item.describe }}</text>
+          </view>
+        </view>
+      </view>
+    </block>
+    <!-- 各种经历(学习、工作、项目) end-->
+  </view>
+</view>

@@ -1,0 +1,33 @@
+/* pages/Information/Information.wxss */
+
+.Information {
+  width: 100%;
+  min-height: 100%;
+  background-color: #fff;
+  padding: 220rpx 0 0 0;
+  box-sizing: border-box;
+}
+
+.Information .Information_function {
+  display: flex;
+  padding: 30rpx 0;
+  justify-content: space-between;
+  border-bottom: 1px solid #f1f1f1;
+  font-size: 32rpx;
+  align-items: center;
+}
+
+.Information_function .Information_function_text {
+  padding: 0 40rpx;
+  box-sizing: border-box;
+}
+.Information_function_text .Information_function_text_describe{
+  color: #989899;
+  margin-top: 10rpx;
+  font-size: 28rpx;
+}
+.Information .Information_function:last-child {
+  padding-top: 30rpx;
+  padding-bottom: 0;
+  border: 0;
+}

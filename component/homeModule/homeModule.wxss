@@ -1,0 +1,101 @@
+/* component/homeModule/homeModule.wxss */
+@import "../../app.wxss";
+
+.homeModule {
+  padding: 30rpx;
+  box-sizing: border-box;
+  border-bottom: 2rpx solid #dadada;
+}
+
+.homeModule .homeModule_title {
+  display: flex;
+  margin-bottom: 15rpx;
+  font-size: 30rpx;
+  color: #989899;
+}
+
+.homeModule .homeModule_title_box {
+  display: flex;
+  height: 150rpx;
+  margin-bottom: 30rpx;
+}
+
+.homeModule_title_box .homeModule_title_box_details {
+  flex: 1;
+  margin-right: 20rpx;
+}
+
+.homeModule_title_box_details .homeModule_title_box_details_title {
+  font-weight: bold;
+  font-size: 38rpx;
+  margin-bottom: 10rpx;
+}
+
+.homeModule_title_box_details .homeModule_title_box_details_content {
+  font-size: 34rpx;
+  color: #989899;
+}
+
+.homeModule_title_box .homeModule_title_box_image {
+  flex-basis: 160rpx;
+  height: 100%;
+}
+
+.homeModule_title_box_image image {
+  width: 100%;
+  height: 100%;
+}
+
+.homeModule .homeModule_title_info {
+  display: flex;
+}
+
+.homeModule_title_info .homeModule_title_info_details {
+  flex: 1;
+}
+
+.homeModule_title_info_details .homeModule_title_info_details_t {
+  display: flex;
+  margin-bottom: 5rpx;
+}
+
+.homeModule_title_info_details_t .homeModule_title_info_details_t_author {
+  font-size: 32rpx;
+  color: #989899;
+}
+
+.homeModule_title_info_details_t_author text {
+  margin-right: 10rpx;
+  color: #000;
+}
+
+.homeModule_title_info_details .homeModule_title_info_details_b {
+  display: flex;
+  font-size: 32rpx;
+  color: #989899;
+}
+
+.homeModule_title_info_details_b .homeModule_title_info_details_b_time {
+  margin-right: 10rpx;
+}
+
+.homeModule_title_info_details_b .homeModule_title_info_details_b_agree text {
+  margin-right: 10rpx;
+}
+
+.homeModule_title_info .homeModule_title_info_collection {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.homeModule_title_info_collection .homeModule_title_info_collection_image {
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.homeModule_title_info_collection_image image {
+  width: 100%;
+  height: 100%;
+}

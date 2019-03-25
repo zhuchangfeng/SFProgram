@@ -1,0 +1,25 @@
+<!--component/article/article.wxml-->
+<view class='article'>
+  <view class='article_title'>
+    <text>{{ dataValue.title }}</text>
+  </view>
+  <view class='article_describe'>
+    <view class='article_describe_label'>
+      <text wx:if="{{ dataValue.attribute=='article' }}">文章</text>
+      <text wx:else>问答</text>
+    </view>
+    <view class='article_describe_author'>
+      <text>{{ dataValue.author }}</text>
+    </view>
+    <view class='article_describe_spot'>
+      <text>·</text>
+    </view>
+    <view class='article_describe_collection'>
+      <text>{{ dataValue.amount }}</text>
+      <view class='article_describe_collection_text'>
+        <text wx:if="{{ dataValue.attribute=='article' }}">收藏</text>
+        <text wx:else>回答</text>
+      </view>
+    </view>
+  </view>
+</view>

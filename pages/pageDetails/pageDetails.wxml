@@ -1,0 +1,137 @@
+<!--pages/pageDetails/pageDetails.wxml-->
+<view class='pageDetails'>
+  <!-- 标题 -->
+  <view class='pageDetails_title' id='titleBar' style='background-color:{{ titleBg }}'>
+    <view class='pageDetails_title_return' bindtap='callBack'>
+      <image src='{{ imgSrc.img1 }}'></image>
+    </view>
+    <view class='pageDetails_title_box'>
+      <view class='pageDetails_title_box_image'>
+        <image src='{{ imgSrc.img2 }}'></image>
+      </view>
+      <view class='pageDetails_title_box_image'>
+        <image src='{{ imgSrc.img3 }}'></image>
+      </view>
+    </view>
+  </view>
+  <!-- 标题 end-->
+  <view class='pageDetails_box'>
+    <view class='pageDetails_box_image'>
+      <image src='https://live-static.segmentfault.com/445/055/445055830-5b9105b25d7c7_render'></image>
+    </view>
+    <view class='pageDetails_box_watch'>
+      <view class='pageDetails_box_watch_box'>
+        <view class='pageDetails_box_watch_box_image'>
+          <image src='./image/player.svg'></image>
+        </view>
+        <text>试看</text>
+      </view>
+    </view>
+    <view class='pageDetails_details'>
+      <view class='pageDetails_details_title'>
+        <text>凯威教你学 Python（二）：Python的字符串和列表</text>
+      </view>
+      <view class='pageDetails_details_time'>
+        <text>2018-09-13 周四 20:00</text>
+      </view>
+      <view class='pageDetails_details_jion'>
+        <view class='pageDetails_details_jion_box'>
+          <text class='mr5'>75</text>人参与
+          <text class='mbt5'>·</text>
+          <text class='mr5'>75</text>收藏
+        </view>
+        <text class='red'>邀请(得佣金)</text>
+      </view>
+    </view>
+  </view>
+  <!-- 选择栏 -->
+  <view class='pageDetails_choice' id='choiceBox' style='{{ styleValue }}'>
+    <block wx:for="{{ choiceData }}" wx:key="index">
+      <view class="pageDetails_choice_item {{ indexValue==index?'hover':''}}" data-index='{{ index }}' bindtap='selectOne'>
+        <text>{{ item.text }}</text>
+      </view>
+    </block>
+  </view>
+  <!-- 选择栏 end-->
+  <view class='pageDetails_seletcBox'>
+    <view class='pageDetails_seletcBox_container' style='{{ leftValue }}'>
+      <!-- 详情介绍 -->
+      <view class='pageDetails_position' style='padding-top:{{ choiceHeight }}px;  padding-bottom:{{ buyHeight }}px'>
+        <view class='pageDetails_choice_box'>
+          <view class='pageDetails_choice_box_title'>
+            <text class='ml20'>讲师信息</text>
+          </view>
+          <view class='pageDetails_choice_box_teacher'>
+            <view class='pageDetails_choice_box_teacher_image'>
+              <image src='https://wx.qlogo.cn/mmopen/vi_32/dfuCFILzpEnX9VTcxL75GFh46Uwia6nNGPWz3AzAVG2Qo0bY4HT54W55dG5IUhvYrib5OpexjuhxKhkXcyHWhpPA/132'></image>
+            </view>
+            <view class='pageDetails_choice_box_teacher_box'>
+              <view class='pageDetails_choice_box_teacher_box_name'>
+                <text>小黑同学</text>
+              </view>
+            </view>
+          </view>
+          <view class='pageDetails_choice_box_describe'>
+            <text>凯威老师毕业于北京大学，先后就职于百度、Amazon、粉笔网。 曾管理数十人团队，负责百度外卖Rank&推荐系统、亚马逊全球物流等千万量级产品。擅长高并发高稳定性后端系统开发，向学生深入浅出传授核心技术。</text>
+          </view>
+        </view>
+        <view class='pageDetails_choice_box'>
+          <view class='pageDetails_choice_box_title' id="briefBox">
+            <text class='ml20'>内容简介</text>
+          </view>
+          <view class='pageDetails_choice_box_introduce'>
+            <text>Python入门导论的免费公开课 👉 <text class='tC textU'>戳这里可以查看</text> 👈</text>
+          </view>
+          <view class='pageDetails_choice_box_image'>
+            <image src='https://image-static.segmentfault.com/181/998/1819982982-5b8509ec194e4_articlex'></image>
+          </view>
+        </view>
+      </view>
+      <!-- 详情介绍 end-->
+
+      <!-- 讲座推荐 -->
+      <view class='pageDetails_position' style='padding-top:{{ choiceHeight }}px;  padding-bottom:{{ buyHeight }}px'>
+        <view class='pageDetails_choice_box' style='padding-bottom:0px'>
+          <view class='pageDetails_choice_box_title'>
+            <text class='ml20'>相似讲座推荐</text>
+          </view>
+          <block wx:for="{{ similarData }}" wx:key="index">
+            <goodCourses courses="{{ item }}"></goodCourses>
+          </block>
+        </view>
+        <view class='pageDetails_choice_box' style='padding-bottom:0px'>
+          <view class='pageDetails_choice_box_title'>
+            <text class='ml20'>讲师的其他讲座</text>
+          </view>
+          <block wx:for="{{ otherData }}" wx:key="index">
+            <goodCourses courses="{{ item }}"></goodCourses>
+          </block>
+        </view>
+      </view>
+      <!-- 讲座推荐 end-->
+    </view>
+
+  </view>
+
+  <!-- 课程购买 -->
+  <view class='pageDetails_buy' style='{{ styleData }}' id='buyBox'>
+    <view class='pageDetails_buy_l'>
+      <view class='pageDetails_buy_l_price'>
+        <text class='m del gray mr10'>25.60</text>
+        <text class='m fs'>98.0</text>
+      </view>
+      <view class='pageDetails_buy_l_evaluate'>
+        <block wx:for="{{[1,2,3,4,5]}}" wx:key="index">
+          <view class="pageDetails_buy_l_evaluate_item {{ gradeValue  <= index  ?'hover':''}}">
+            <image src='./image/stars.svg'></image>
+          </view>
+        </block>
+        <text>{{ gradeValue }}</text>分
+      </view>
+    </view>
+    <view class='pageDetails_buy_r tB'>
+      <text>报名参与</text>
+    </view>
+  </view>
+  <!-- 课程购买 end-->
+</view>

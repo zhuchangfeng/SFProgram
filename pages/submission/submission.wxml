@@ -1,0 +1,17 @@
+<!--pages/submission/submission.wxml-->
+<view class='submission'>
+  <view class='submission_title'>
+    <view class='submission_title_close' bindtap='callBack'>
+      <image src='./image/arrow.svg'></image>
+    </view>
+    <view class='submission_title_text'>
+      <text>{{ titleValue }}</text>
+    </view>
+    <view class="submission_title_next" bindtap='nextStep'>
+      <text class=" {{ isSubmit?'tC':''}}">提交</text>
+    </view>
+  </view>
+  <view class='submission_input'>
+    <textarea placeholder="{{ placeholderValue }}" auto-focus="true" maxlength="-1" auto-height="true" bindinput="inputFn" value='{{ inputValue }}'></textarea>
+  </view>
+</view>

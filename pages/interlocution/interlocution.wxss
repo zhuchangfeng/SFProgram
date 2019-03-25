@@ -1,0 +1,68 @@
+/* pages/interlocution/interlocution.wxss */
+
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+
+.interlocution {
+  width: 100%;
+  min-height: 100%;
+  background-color: #fff;
+}
+
+.interlocution .interlocution_title {
+  width: 100%;
+  position: fixed;
+  top: 220rpx;
+  border-bottom: 1px solid #f1f1f1;
+  background-color: #fff;
+  z-index: 1;
+  padding: 20rpx;
+  box-sizing: border-box;
+}
+
+.interlocution_title .interlocution_title_item {
+  color: #989899;
+  padding: 10rpx 20rpx;
+  border-radius: 5px;
+  margin: 0 10rpx;
+  display: inline-block;
+}
+
+.interlocution_title_item.hover {
+  background: #f1f1f1;
+  color: #000;
+}
+
+.interlocution_title_item.white {
+  color: white;
+}
+
+.interlocution_title .interlocution_title_item:first-child {
+  margin-left: 0;
+}
+
+.interlocution_title .interlocution_title_item:last-child {
+  margin-right: 0;
+}
+
+.interlocution .interlocution_box {
+  width: 100%;
+  overflow: hidden;
+}
+
+.interlocution_box .interlocution_box_flex {
+  padding-top: 40rpx;
+  width: 200%;
+  display: flex;
+  transition: .3s all ease-in;
+}
+
+.interlocution_box_flex .interlocution_box_flex_item {
+  width: 100%;
+  padding-left: 40rpx;
+  padding-right: 40rpx;
+  box-sizing: border-box;
+}

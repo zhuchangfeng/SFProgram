@@ -1,0 +1,44 @@
+<!--pages/ranking/ranking.wxml-->
+<view class='ranking'>
+  <navigation title="用户排行榜"></navigation>
+  <view class='ranking_title' id='selectBox'>
+    <block wx:for="{{ titleData }}" wx:key="index">
+      <view class="ranking_title_item {{ index==indexValue?'hover':''}}" bindtap='selectOne' data-index='{{ index }}'>
+        <text>{{ item.text }}</text>
+      </view>
+    </block>
+  </view>
+  <view class='ranking_box' style=' padding-top: {{ topDistance }}px'>
+    <view class='ranking_box_flex' style="{{ leftValue }};width:500%;">
+      <block wx:for="{{ numberArr }}" wx:key="index">
+        <view class='ranking_box_flex_item'>
+          <block wx:for="{{ rankingData }}" wx:key="index">
+            <view class='ranking_box_flex_item_box'>
+              <view class='ranking_box_flex_item_box_ranking'>
+                <text>{{ index+1 }}</text>
+              </view>
+              <view class='ranking_box_flex_item_box_image'>
+                <image src='{{ item.imgSrc }}'></image>
+              </view>
+              <view class='ranking_box_flex_item_box_title'>
+                <view class='ranking_box_flex_item_box_title_box'>
+                  <view class='ranking_box_flex_item_box_title_box_name'>
+                    <text>{{ item.name }}</text>
+                  </view>
+                  <view class='ranking_box_flex_item_box_title_box_number'>
+                    <text>+{{ item.people }}</text>
+                  </view>
+                </view>
+                <view class='ranking_box_flex_item_box_title_icon' wx:if="{{ index<=2}}">
+                  <image src='./image/gold.svg' wx:if="{{ index==0}}"></image>
+                  <image src='./image/silver.svg' wx:if="{{ index==1}}"></image>
+                  <image src='./image/bronze.svg' wx:if="{{ index==2}}"></image>
+                </view>
+              </view>
+            </view>
+          </block>
+        </view>
+      </block>
+    </view>
+  </view>
+</view>

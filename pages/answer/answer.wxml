@@ -1,0 +1,9 @@
+<!--pages/answer/answer.wxml-->
+<view class='answer'>
+  <navigation title="热门问答" searchValue></navigation>
+  <view class='answer_box'>
+  <block wx:for="{{ questionData }}" wx:key="index">
+      <article dataValue="{{ item }}"></article>
+  </block>
+  </view>
+</view>

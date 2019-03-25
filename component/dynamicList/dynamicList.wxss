@@ -1,0 +1,85 @@
+/* component/dynamicList/dynamicList.wxss */
+@import "../../app.wxss";
+
+.dynamicList {
+  display: flex;
+  padding-top: 40rpx;
+}
+
+.dynamicList .dynamicList_user {
+  flex-basis: 100rpx;
+  height: 100rpx;
+}
+
+.dynamicList_user image {
+  width: 100%;
+  height: 100%;
+}
+
+.dynamicList .dynamicList_content {
+  flex: 1;
+  padding-bottom: 40rpx;
+  margin-left: 40rpx;
+  border-bottom: 1px solid #f1f1f1;
+}
+.dynamicList .dynamicList_flexBox{
+  display: flex;
+  align-items: center;
+  margin-right:40rpx;
+  margin-bottom: 20rpx;
+}
+.dynamicList_flexBox .dynamicList_flexBox_l{
+  flex-basis: 110rpx;
+  height: 110rpx;
+  margin-right: 20rpx;
+  color: #fff;
+  font-size: 55rpx;
+  display: flex;
+  border-radius: 10px;
+  justify-content: center;
+  align-items: center;
+  background-color: #24a071;
+}
+.dynamicList_flexBox .dynamicList_flexBox_r{
+  flex: 1;
+}
+.dynamicList_content .dynamicList_content_name {
+  display: flex;
+  align-items: center;
+  color: #989899;
+  font-size: 34rpx;
+  margin-bottom: 20rpx;
+}
+
+.dynamicList_content_name .dynamicList_content_name_behavior {
+  flex: 1;
+}
+
+.dynamicList_content_name .dynamicList_content_time {
+  margin-right: 40rpx;
+}
+
+.dynamicList .dynamicList_content_problem {
+  font-size: 34rpx;
+}
+
+.dynamicList .dynamicList_content_vote {
+  display: flex;
+  align-items: center;
+  color: #989899;
+  font-size: 32rpx;
+  margin-right: 40rpx;
+}
+
+.dynamicList .dynamicList_content_describe {
+  color: #989899;
+  box-sizing: border-box;
+}
+.dynamicList .dynamicList_content_image{
+  width: 180rpx;
+  height: 180rpx;
+}
+.dynamicList_content_image image{
+  width: 100%;
+  height: 100%;
+}

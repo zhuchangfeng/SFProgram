@@ -1,0 +1,50 @@
+/* pages/add/add.wxss */
+.release {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  background-color: #fff;
+  padding: 20rpx 40rpx;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+.release .release_cancel {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 30rpx;
+}
+
+.release .release_title {
+  font-size: 60rpx;
+  margin-top: 20rpx;
+}
+
+.release .release_box {
+  display: flex;
+  flex: 1;
+  align-items: flex-end;
+  margin-bottom: 110rpx;
+}
+
+.release_box .release_box_item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.release_box_item .release_box_item_image {
+  width: 120rpx;
+  height: 120rpx;
+  margin-bottom: 40rpx;
+}
+
+.release_box_item_image image {
+  width: 100%;
+  height: 100%;
+}

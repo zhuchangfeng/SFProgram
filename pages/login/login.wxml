@@ -1,0 +1,48 @@
+<!--pages/login/login.wxml-->
+<view class='login tB'>
+  <view class='login_title'>
+    <view class='login_title_l' bindtap='callBack'>
+      <text>跳过</text>
+    </view>
+    <view class='login_title_r'>
+      <text>社区账号登录</text>
+    </view>
+  </view>
+  <view class='login_logo'>
+    <image src='./image/minijie.png'></image>
+  </view>
+
+  <view class='login_button'>
+    <view class='login_button_login tC' bindtap='signIn'>
+      <text>社区账号登录</text>
+    </view>
+    <view class='login_button_new tB'>
+      <text>创建账号</text>
+    </view>
+    <view class='login_clause'>
+      <text>同意并接受</text>
+      <text class='underline'>服务条款</text>
+    </view>
+  </view>
+
+  <view class='login_box' style='{{ styleValue }}'>
+    <view class='login_box_close' bindtap='closeFn'>
+      <view class='login_box_close_image'>
+        <image src='./image/close.svg'></image>
+      </view>
+    </view>
+    <view class='login_box_title'>
+      <text>第三方授权登录</text>
+    </view>
+    <view class='login_box_item'>
+      <button open-type="getUserInfo" bindgetuserinfo='getUserValue' plain="true">
+        <view class='login_box_item_image'>
+          <image src='./image/weChat.svg'></image>
+        </view>
+        <view class='login_box_item_text'>
+          <text>微信</text>
+        </view>
+      </button>
+    </view>
+  </view>
+</view>

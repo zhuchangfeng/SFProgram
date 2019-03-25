@@ -1,0 +1,47 @@
+<!--pages/forum/forum.wxml-->
+<view class='forum'>
+  <!-- 
+    title:导航栏标题
+    top:距离顶部的位置
+ -->
+  <titleBar title="讲堂" top="{{ scrollTop }}"></titleBar>
+  <view class='forum_box'>
+    <view class='forum_content'>
+      <view class='forum_content_swiper'>
+        <swipeComponentsr></swipeComponentsr>
+      </view>
+    </view>
+    <view class='forum_searchBar'>
+      <block wx:for="{{ barData }}" wx:key="index">
+        <view class='forum_searchBar_item'>
+          <view class='forum_searchBar_item_icon'>
+            <image src='{{ item.imgSrc }}'></image>
+          </view>
+          <view class='forum_searchBar_item_text'>
+            <text>{{ item.describe }}</text>
+          </view>
+        </view>
+      </block>
+    </view>
+    <view class='forum_title_box'>
+      <view class='forum_title_box_text'>
+        <text>新上好课</text>
+      </view>
+    </view>
+    <view class='forum_courses'>
+      <block wx:for="{{ goodCourses }}" wx:key="index">
+        <goodCourses courses="{{ item }}"></goodCourses>
+      </block>
+    </view>
+    <view class='forum_title_box'>
+      <view class='forum_title_box_text'>
+        <text>热门推荐</text>
+      </view>
+    </view>
+    <view class='forum_courses'>
+      <block wx:for="{{ hotRecommend }}" wx:key="index">
+        <goodCourses courses="{{ item }}"></goodCourses>
+      </block>
+    </view>
+  </view>
+</view>

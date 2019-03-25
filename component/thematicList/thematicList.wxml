@@ -1,0 +1,14 @@
+<!--component/thematicList/thematicList.wxml-->
+<view class='thematicList'>
+    <view class='thematicList_image'>
+        <image src='{{ dataValue.imageSrc }}'></image>
+    </view>
+    <view class='thematicList_box'>
+        <view class='thematicList_box_name Tline'>
+            <text>{{ dataValue.text }}</text>
+        </view>
+        <view class='thematicList_box_number'>
+            <text class='mr10'>{{ dataValue.followNum }}</text>关注
+        </view>
+    </view>
+</view>

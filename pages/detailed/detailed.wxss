@@ -1,0 +1,47 @@
+/* pages/detailed/detailed.wxss */
+
+.detailed {
+  width: 100%;
+  min-height: 100%;
+  background-color: #fff;
+  padding: 240rpx 0 0 0;
+}
+
+.detailed .detailed_box {
+  padding: 0 40rpx;
+  box-sizing: border-box;
+}
+
+.detailed_box .detailed_common {
+  border-bottom: 1px solid #f1f1f1;
+  padding: 40rpx 0;
+  font-size: 40rpx;
+}
+
+.detailed_common .detailed_city_name {
+  padding-top: 20rpx;
+  font-size: 34rpx;
+}
+
+.detailed_common .detailed_skill_box {
+  display: flex;
+  align-items: center;
+}
+
+.detailed_skill_box .detailed_skill_item {
+  background-color: #ededed;
+  color: #989899;
+  font-size: 28rpx;
+  padding: 8rpx;
+  border-radius: 5px;
+  margin-right: 20rpx;
+  margin-top: 20rpx;
+}
+.detailed_common .detailed_common_box{
+  margin-top: 40rpx;
+  font-size: 34rpx;
+}
+.detailed_common_box .detailed_common_box_text{
+  color: #989899;
+  margin-top: 10rpx;
+}

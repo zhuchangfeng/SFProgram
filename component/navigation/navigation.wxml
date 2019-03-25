@@ -1,0 +1,17 @@
+<!--component/navigation/navigation.wxml-->
+<view class='navigation' style=' background-color:{{ color }}'>
+  <view class='navigation_box'>
+    <view class='navigation_box_return' bindtap='callBack'>
+      <image src='./image/return.svg'></image>
+    </view>
+    <view class='navigation_box_image' bindtap='showSearch' wx:if="{{ search }}">
+      <image src='./image/search.svg'></image>
+    </view>
+    <view class='navigation_box_image narrow' bindtap='showEdit' wx:if="{{ edit }}">
+      <image src='./image/edit.svg'></image>
+    </view>
+  </view>
+  <view class='navigation_text' style='font-size:{{ defaultFace }}px;margin-top:{{ marginTop }}px; margin-left: {{ marginLeft }}px'>
+    <text>{{ title }}</text>
+  </view>
+</view>

@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "讲堂",
+  "usingComponents": {
+    "goodCourses": "/component/goodCourses/goodCourses",
+    "swipeComponentsr": "/component/swiper/swiper",
+    "titleBar": "/component/titleBar/titleBar"
+  }
+}

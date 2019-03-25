@@ -1,0 +1,77 @@
+/* component/goodCourses/goodCourses.wxss */
+@import "../../app.wxss";
+
+.goodCourse {
+  display: flex;
+  padding-bottom: 70rpx;
+  height: 200rpx;
+}
+
+.goodCourse .goodCourse_describe {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-right: 35rpx;
+  box-sizing: border-box;
+}
+
+.goodCourse_describe .goodCourse_describe_title {
+  font-size: 32rpx;
+}
+
+.goodCourse_describe .goodCourse_describe_money {
+  font-size: 30rpx;
+  font-weight: bold;
+}
+
+.goodCourse_describe .goodCourse_describe_info {
+  display: flex;
+  align-items: center;
+}
+
+.goodCourse_describe_info .goodCourse_describe_info_label {
+  font-size: 20rpx;
+  color: rgb(173, 173, 173);
+  margin-right: 15rpx;
+}
+
+.goodCourse_describe_info_label text {
+  display: block;
+  background-color: rgba(192, 192, 192, 0.418);
+  padding: 5rpx;
+  border-radius: 5rpx;
+  overflow: hidden;
+}
+
+.goodCourse_describe_info .goodCourse_describe_info_author {
+  font-size: 30rpx;
+  color: rgb(173, 173, 173);
+  margin-right: 10rpx;
+}
+
+.goodCourse_describe_info .goodCourse_describe_info_enroll {
+  display: flex;
+  color: rgb(173, 173, 173);
+  font-size: 30rpx;
+}
+
+.goodCourse_describe_info_enroll .goodCourse_describe_info_enroll_label {
+  margin-right: 10rpx;
+}
+
+.goodCourse_describe_info_enroll .goodCourse_describe_info_enroll_number {
+  margin-right: 10rpx;
+}
+
+.goodCourse .goodCourse_image {
+  width: 280rpx;
+  background-color: #ccc;
+  border-radius: 6rpx;
+  overflow: hidden;
+}
+
+.goodCourse_image image {
+  width: 100%;
+  height: 100%;
+}

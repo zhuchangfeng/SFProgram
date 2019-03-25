@@ -1,0 +1,19 @@
+<!--pages/add/add.wxml-->
+<view class='release'>
+  <view class='release_cancel tC' bindtap='hideAdd'>
+    <text>取消</text>
+  </view>
+  <view class='release_title'>
+    <text>添加</text>
+  </view>
+  <view class='release_box'>
+      <view class='release_box_item' wx:for="{{ addList }}" wx:key="index">
+            <view class='release_box_item_image'>
+                  <image src='{{ item.imgSrc }}'></image>
+            </view>
+            <view class='release_box_item_text'>
+                  <text>{{ item.describe }}</text>
+            </view>
+      </view>
+  </view>
+</view>

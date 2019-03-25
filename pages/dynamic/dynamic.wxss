@@ -1,0 +1,13 @@
+/* pages/dynamic/dynamic.wxss */
+
+.dynamic {
+  width: 100%;
+  min-height: 100%;
+  background-color: #fff;
+  padding: 220rpx 0 2px 0;
+  box-sizing: border-box;
+}
+.dynamic .dynamic_box{
+  padding:  0 40rpx;
+  box-sizing: border-box;
+}

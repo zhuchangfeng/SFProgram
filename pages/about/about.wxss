@@ -1,0 +1,101 @@
+/* pages/about/about.wxss */
+
+.about {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  padding: 40rpx;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.about .about_author {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300rpx;
+}
+
+.about_author .about_author_image {
+  width: 286px;
+  height: 100px;
+  transform:scale(0.6,0.6);
+}
+
+.about_author_image image {
+  width: 100%;
+  height: 100%;
+}
+
+.about .about_contact {
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+  padding: 35rpx 0;
+}
+
+.about_contact .about_contact_explain_surprise {
+  font-size: 26rpx;
+  color: #989899;
+  margin-top: 10rpx;
+}
+
+.about_contact .about_contact_content {
+  font-size: 28rpx;
+  color: #989899;
+}
+
+.about .about_box {
+  width: 100%;
+  height: 50%;
+  background-color: #fff;
+  position: absolute;
+  bottom: -100%;
+  left: 0;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  box-shadow: 0 4px 8px 4px #aaa;
+  transition: all ease-in 0.3s;
+  z-index: 1;
+}
+
+.about_box .about_box_close {
+  display: flex;
+  justify-content: flex-end;
+  padding: 15rpx;
+}
+
+.about_box_close .about_box_close_image {
+  width: 50rpx;
+  height: 50rpx;
+}
+
+.about_box_close_image image {
+  width: 100%;
+  height: 100%;
+}
+
+.about_box .about_box_title {
+  text-align: center;
+}
+
+.about_box .about_box_describe {
+  font-size: 30rpx;
+  padding: 10rpx 30rpx 0 30rpx;
+  text-indent: 60rpx;
+  line-height: 60rpx;
+  color: #989899;
+}
+
+.about .about_tips {
+  text-align: center;
+  position: absolute;
+  bottom: 20rpx;
+  font-size: 26rpx;
+  left: 0;
+  color: #989899;
+  width: 100%;
+}

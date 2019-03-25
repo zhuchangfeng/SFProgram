@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "问答区",
+  "usingComponents": {
+    "navigation": "/component/navigation/navigation",
+    "article": "/component/article/article"
+  }
+}

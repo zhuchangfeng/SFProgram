@@ -1,0 +1,35 @@
+/* pages/news/news.wxss */
+
+.new {
+  width: 100%;
+  background-color: #fff;
+  height: 100%;
+}
+
+.new .new_box {
+  padding-top: 106px;
+}
+
+.new .new_list {
+  display: flex;
+  align-items: center;
+  padding: 0 40rpx;
+  box-sizing: border-box;
+}
+
+.new_list .new_list_text {
+  flex: 1;
+  border-bottom: 1px solid #e2e2e2;
+  padding: 50rpx 0;
+  margin-left: 40rpx;
+}
+
+.new_list .new_list_image {
+  width: 90rpx;
+  height: 80rpx;
+}
+
+.new_list_image image {
+  width: 100%;
+  height: 100%;
+}

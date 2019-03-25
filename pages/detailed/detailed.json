@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "详细资料",
+  "usingComponents": {
+    "navigation": "/component/navigation/navigation"
+  }
+}

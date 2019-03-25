@@ -1,0 +1,55 @@
+<!--pages/follow/follow.wxml-->
+<view class='follow'>
+  <navigation title="我的关注"></navigation>
+  <view class='follow_title' id='selectBox'>
+    <block wx:for="{{ titleData }}" wx:key="index">
+      <view class="follow_title_item {{ index==indexValue?'hover':''}}" bindtap='selectOne' data-index='{{ index }}'>
+        <text>{{ item.text }}</text>
+      </view>
+    </block>
+  </view>
+  <view class='follow_box' style=' padding-top: {{ topDistance }}px'>
+    <view class='follow_box_flex' style='{{ leftValue }}'>
+      <view class='follow_box_flex_item'>
+        <view class='follow_box_flex_item_box'>
+          <view class='follow_box_flex_item_box_image radiusCircular'>
+            <image src='https://i0.hdslb.com/bfs/sycp/tmaterial/201809/c9c64ddcabfccb04e0ee825c3e2201ea.jpg'></image>
+          </view>
+          <view class='follow_box_flex_item_box_name'>
+            <view class='follow_box_flex_item_box_name_text'>
+              <text>小黑同学</text>
+            </view>
+            <view class='follow_box_flex_item_box_name_describe'>
+              <text class='Oline'>这是一个小程序的小白开发者，很菜的那种</text>
+            </view>
+          </view>
+          <view class='follow_box_flex_item_box_follow'>
+            <text>已关注</text>
+          </view>
+        </view>
+      </view>
+      <view class='follow_box_flex_item'>
+        <view class='follow_box_flex_item_box'>
+          <view class='follow_box_flex_item_box_image radius5px'>
+            <image src='https://i0.hdslb.com/bfs/sycp/tmaterial/201809/c9c64ddcabfccb04e0ee825c3e2201ea.jpg'></image>
+          </view>
+          <view class='follow_box_flex_item_box_name'>
+              <text>前端</text>
+          </view>
+          <view class='follow_box_flex_item_box_follow'>
+            <text>已关注</text>
+          </view>
+        </view>
+      </view>
+      <view class='follow_box_flex_item'>
+        444444
+      </view>
+      <view class='follow_box_flex_item'>
+        5555
+      </view>
+      <view class='follow_box_flex_item'>
+        666666
+      </view>
+    </view>
+  </view>
+</view>

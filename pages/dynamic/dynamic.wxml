@@ -1,0 +1,9 @@
+<!--pages/dynamic/dynamic.wxml-->
+<view class='dynamic'>
+  <navigation title="我的动态" top="{{ scrollTop }}" bgColor="#fff" ></navigation>
+  <view class='dynamic_box'>
+    <block wx:for="{{ dynamicData }}" wx:key="index">
+      <dynamicList dynamicValue="{{ item }}"></dynamicList>
+    </block>
+  </view>
+</view>

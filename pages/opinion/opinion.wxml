@@ -1,0 +1,24 @@
+<!--pages/opinion/opinion.wxml-->
+<view class='opinion'>
+  <view class='opinion_title'>
+    <view class='opinion_title_close' bindtap='callBack'>
+      <image src='./image/close.svg'></image>
+    </view>
+    <view class='opinion_title_text'>
+      <text>意见反馈</text>
+    </view>
+    <view class="opinion_title_next" bindtap='nextStep'>
+      <text class=" {{ selectValue!=''?'tC':''}}">下一步</text>
+    </view>
+  </view>
+  <block wx:for="{{ opinionData }}" wx:key="index">
+    <view class='opinion_item' bindtap='selectOne' data-index='{{ index }}'>
+      <view class='opinion_item_text'>
+        <text>{{ item.text }}</text>
+      </view>
+      <view class='opinion_item_image' wx:if="{{ index == indexValue }}">
+        <image src='./image/tick.svg'></image>
+      </view>
+    </view>
+  </block>
+</view>

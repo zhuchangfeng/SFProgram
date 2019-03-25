@@ -1,0 +1,9 @@
+<!--pages/special/special.wxml-->
+<view class='special'>
+  <navigation title="专题推荐" searchValue="false"></navigation>
+  <view class='special_box'>
+    <block wx:for="{{ specialData }}" wx:key="index">
+      <thematicList dataValue="{{ item }}"></thematicList>
+    </block>
+  </view>
+</view>

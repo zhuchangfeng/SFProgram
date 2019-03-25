@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "发现",
+  "usingComponents": {
+    "swipeComponentsr": "/component/swiper/swiper",
+    "titleBar": "/component/titleBar/titleBar",
+    "article": "/component/article/article"
+  }
+}

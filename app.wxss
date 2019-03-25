@@ -1,0 +1,122 @@
+/**app.wxss**/
+
+.tB {
+  background-color: #24a071;
+}
+
+.tC {
+  color: #24a071;
+}
+
+page {
+  background-color: #f1f1f1;
+  width: 100%;
+  height: 100%;
+  font-family: "\5FAE\8F6F\96C5\9ED1";
+}
+.textU{
+  text-decoration: underline
+}
+image {
+  display: block;
+}
+
+.W100 {
+  width: 100%;
+}
+
+.H100 {
+  height: 100%;
+}
+
+.whole100 {
+  width: calc(100% - 7rpx);
+  height: 100%;
+}
+
+.full100 {
+  width: 100%;
+  min-height: 100%;
+}
+.del{
+  /*加删除线*/
+  text-decoration:line-through;
+}
+.m::before{
+  content: "¥";
+  padding: 0px;
+  margin: 0px;
+  font-size: 80%;
+  /*加金钱前缀*/
+}
+.Tline {
+  /*两行省略号  */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  white-space: normal;
+  word-break: break-all;
+}
+
+.Oline {
+  /*1行内省略号  */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+  white-space: normal;
+  word-break: break-all;
+}
+
+.THline {
+  /*三行省略号  */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  white-space: normal;
+  word-break: break-all;
+}
+
+.m::before {
+  content: "¥";
+  padding: 0px;
+  margin: 0px;
+  font-size: 80%;
+  /*加金钱前缀*/
+}
+
+.mb10 {
+  margin-bottom: 10rpx;
+}
+
+.ml10 {
+  margin-left: 10rpx;
+}
+.ml20{
+  margin-left: 20rpx;
+}
+.mr10 {
+  margin-right: 10rpx;
+}
+
+.p10 {
+  padding: 10rpx 0;
+}
+
+.mbt5 {
+  margin: 0 5rpx;
+}
+.mr5{
+margin-right: 5rpx
+}
+.fs14{
+  font-size: 28rpx;
+}
+.fs12{
+  font-size: 24rpx;
+}
+.fs16{
+  font-size: 32rpx;
+}

@@ -1,0 +1,45 @@
+/* component/article/article.wxss */
+
+.article {
+  font-size: 34rpx;
+  padding-bottom:70rpx;
+}
+
+.article .article_title {
+  margin-bottom: 20rpx;
+}
+
+.article .article_describe {
+  display: flex;
+  color: rgb(167, 167, 167);
+}
+
+.article_describe .article_describe_label {
+  font-size: 24rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.article_describe_label text {
+  display: block;
+  background-color: rgb(219, 219, 219);
+  border-radius: 5rpx;
+  padding: 3rpx 6rpx;
+  margin-right: 10rpx;
+}
+
+.article_describe .article_describe_author {
+  margin-right: 10rpx;
+}
+
+.article_describe .article_describe_spot {
+  margin-right: 10rpx;
+}
+
+.article_describe .article_describe_collection {
+  display: flex;
+}
+.article_describe_collection .article_describe_collection_text{
+  margin-left: 10rpx;
+}

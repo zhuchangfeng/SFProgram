@@ -1,0 +1,25 @@
+<!--component/communityList/communityList.wxml-->
+<view class='communityList'>
+    <view class='communityList_image'>
+        <image src='{{ dataValue.imageSrc }}'></image>
+    </view>
+    <view class='communityList_box'>
+        <view class='communityList_box_title Tline'>
+            <text>{{ dataValue.text }}</text>
+        </view>
+        <view class='communityList_box_details'>
+            <view class='communityList_box_details_place mr10'>
+                <text>{{ dataValue.place }}</text>
+            </view>
+            <view class='communityList_box_details_spot mr10'>
+                <text>·</text>
+            </view>
+            <view class='communityList_box_details_date mr10'>
+                <text>{{ dataValue.date }}</text>
+            </view>
+            <view class='communityList_box_details_time'>
+                  <text>{{ dataValue.time }}</text>
+            </view>
+        </view>
+    </view>
+</view>

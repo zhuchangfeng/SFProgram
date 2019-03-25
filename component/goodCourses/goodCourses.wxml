@@ -1,0 +1,29 @@
+<!--component/goodCourses/goodCourses.wxml-->
+<view class='goodCourse' bindtap='goDetails'>
+      <view class='goodCourse_describe'>
+            <view class='goodCourse_describe_title'>
+                <text class='Tline'>{{ courses.describe }}</text>
+            </view>
+            <view class='goodCourse_describe_money'>
+                  <text class='m'>{{ courses.price }}</text>
+            </view>
+            <view class='goodCourse_describe_info'>
+                  <view class='goodCourse_describe_info_label'>
+                        <text>{{ courses.attribute }}</text>
+                  </view>
+                  <view class='goodCourse_describe_info_author'>
+                        <text>{{ courses.author }}</text>
+                  </view>
+                  <view class='goodCourse_describe_info_enroll'>
+                      <view class='goodCourse_describe_info_enroll_label'>·</view>
+                      <view class='goodCourse_describe_info_enroll_number'>
+                            <text>{{ courses.people }}</text>
+                      </view>
+                      <text>报名</text>
+                  </view>
+            </view>
+      </view>
+      <view class='goodCourse_image'>
+          <image src='{{ courses.imgSrc }}'></image>
+      </view>
+</view>

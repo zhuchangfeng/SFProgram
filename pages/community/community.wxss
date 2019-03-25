@@ -1,0 +1,13 @@
+/* pages/community/community.wxss */
+
+.community {
+  width: 100%;
+  min-height: 100%;
+  background-color: #fff;
+  padding: 220rpx 0 0 0;
+  box-sizing: border-box;
+}
+.community .community_box{
+  padding: 0 40rpx;
+  box-sizing: border-box;
+}

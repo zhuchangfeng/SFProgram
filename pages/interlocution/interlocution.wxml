@@ -1,0 +1,28 @@
+<!--pages/interlocution/interlocution.wxml-->
+<view class='interlocution'>
+  <navigation title="问答区"></navigation>
+  <view class='interlocution_title' id='titleBox'>
+    <scroll-view scroll-x style='width: 100%; white-space: nowrap;' scroll-into-view="{{ toView }}" scroll-with-animation>
+      <block wx:for="{{ titleData }}" wx:key="{{ index }}">
+        <view class="scroll-view-item interlocution_title_item {{ index==indexValue?'hover':'' }}" id="item{{ index }}" bindtap='selectOne' data-index='{{ index }}'>
+          <text>{{ item.text }}</text>
+        </view>
+      </block>
+      <view class='interlocution_title_item tB white'>
+        <text>管理</text>
+      </view>
+    </scroll-view>
+  </view>
+  <view class='interlocution_box' style=' padding-top: {{ topDistance }}px'>
+    <view class='interlocution_box_flex' style='{{ leftValue }}'>
+      <view class='interlocution_box_flex_item'>
+        <block wx:for="{{ questionData }}" wx:key="{{ index }}">
+          <article dataValue="{{item}}"></article>
+        </block>
+      </view>
+      <view class='interlocution_box_flex_item'>
+      22322
+      </view>
+    </view>
+  </view>
+</view>

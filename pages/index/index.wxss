@@ -1,0 +1,98 @@
+/* pages/index/index.wxss */
+
+.index {
+  width: 100%;
+}
+
+.index .index_title {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #fff;
+  z-index: 1;
+}
+
+.index_title .index_box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15rpx 30rpx;
+  box-sizing: border-box;
+  border-bottom: 1px solid transparent;
+}
+
+.index_box .index_box_input {
+  display: flex;
+  align-items: center;
+  height: 80rpx;
+  background-color: #ededed;
+  flex: 1;
+  border-radius: 5rpx;
+}
+
+.index_box_input .index_box_input_image {
+  width: 40rpx;
+  height: 40rpx;
+  margin: 0 30rpx;
+}
+
+.index_box_input_image image {
+  width: 100%;
+  height: 100%;
+}
+
+.index_box_input .index_box_input_text {
+  color: #989899;
+  font-size: 30rpx;
+}
+
+.index_box .index_box_add {
+  width: 70rpx;
+  height: 70rpx;
+  margin-left: 40rpx;
+}
+
+.index_box_add image {
+  width: 100%;
+  height: 100%;
+}
+
+.index_title .index_tab {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 32rpx;
+  border-bottom: 2rpx solid #dadada;
+}
+
+.index_tab .index_tab_item {
+  padding: 24rpx 36rpx;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 2px solid transparent;
+  color: #989899;
+  position: relative;
+}
+
+.index_tab .index_tab_hover {
+  width: 10%;
+  height: 3px;
+  overflow: hidden;
+  background-color: #000;
+  position: absolute;
+  bottom: 0;
+  transition: 0.3s all ease-in-out;
+  border-radius: 5px
+}
+
+.index_tab_item.hover {
+  color: #000;
+  font-weight: 700;
+}
+
+.index .index_swiper {
+  width: 100%;
+  background-color: #fff;
+}

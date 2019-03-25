@@ -1,0 +1,17 @@
+<!--pages/Information/Information.wxml-->
+<view class='Information'>
+  <navigation title="消息推送"></navigation>
+  <block wx:for="{{ informationData }}" wx:key="index">
+    <view class='Information_function'>
+      <view class='Information_function_text'>
+        <text>{{ item.text }}</text>
+        <view class='Information_function_text_describe' wx:if="{{ item.describe!=undefined}}">
+          <text>{{ item.describe}}</text>
+        </view>
+      </view>
+      <view class='Information_function_switch'>
+        <switch checked="{{ item.isChecked }}" type='switch' bindchange="switchChange" data-index='{{ index }}' />
+      </view>
+    </view>
+  </block>
+</view>

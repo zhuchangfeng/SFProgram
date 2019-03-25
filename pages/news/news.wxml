@@ -1,0 +1,14 @@
+<!--pages/news/news.wxml-->
+<view class='new'>
+  <view class='new_box'>
+    <titleBar title="消息" top="{{ scrollTop }}"></titleBar>
+    <view class='new_list' wx:for="{{ dataList }}" wx:key="index">
+      <view class='new_list_image'>
+        <image src='{{ item.imgSrc }}'></image>
+      </view>
+      <view class='new_list_text'>
+        <text>{{ item.describe }}</text>
+      </view>
+    </view>
+  </view>
+</view>

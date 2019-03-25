@@ -1,0 +1,52 @@
+<!--pages/specialDetails/specialDetails.wxml-->
+<view class='specialDetails'>
+  <view class='specialDetails_box' id='specialBox'>
+    <!-- 背景图片 -->
+    <view class='specialDetails_box_bgImage' id='imageBox'>
+      <image src='./image/timg.jpg'></image>
+    </view>
+    <!-- 背景图片 end-->
+    <!-- 顶部栏 -->
+    <view class='specialDetails_box_title' id='titleBox' style='background-color:{{ bcColorValue }};border-bottom: 1px solid {{ borderColor }};'>
+      <view class='specialDetails_box_title_image rotate180'>
+        <image src='{{ imgSrc.img1 }}'></image>
+      </view>
+      <view class='specialDetails_box_title_text' style='opacity:{{ textOpacity }}'>
+          <text>chrome使用技巧</text>
+      </view>
+      <view class='specialDetails_box_title_image'>
+        <image src='{{ imgSrc.img2 }}'></image>
+      </view>
+    </view>
+    <!-- 顶部栏 end-->
+    <!-- 关注信息 -->
+    <view class='specialDetails_box_userInfo' style='opacity:{{ opacityValue }}'>
+      <view class='specialDetails_box_userInfo_image'>
+        <image src='https://wx.qlogo.cn/mmopen/vi_32/dfuCFILzpEnX9VTcxL75GFh46Uwia6nNGPWz3AzAVG2Qo0bY4HT54W55dG5IUhvYrib5OpexjuhxKhkXcyHWhpPA/132'></image>
+      </view>
+      <view class='specialDetails_box_userInfo_title' id='textBox'>
+        <text>chrome使用技巧</text>
+      </view>
+      <view class='specialDetails_box_userInfo_follow'>
+        <view class='specialDetails_box_userInfo_follow_name mr10'>
+          <text>minijie</text>
+        </view>
+        <view class='specialDetails_box_userInfo_follow_spot mr10'>
+          <text>·</text>
+        </view>
+        <view class='specialDetails_box_userInfo_follow_number'>
+          <text class='mr10'>25</text>关注
+        </view>
+      </view>
+      <view class='specialDetails_box_userInfo_button'>
+        <text class='tB'>关注</text>
+      </view>
+    </view>
+    <!-- 关注信息 end-->
+  </view>
+  <view class='specialDetails_container'>
+    <block wx:for="{{ articleData }}" wx:key="index">
+      <article dataValue="{{item}}"></article>
+    </block>
+  </view>
+</view>

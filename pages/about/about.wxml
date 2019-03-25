@@ -1,0 +1,37 @@
+<!--pages/about/about.wxml-->
+<view class='about'>
+  <view class='about_author'>
+    <view class='about_author_image'>
+      <image src='./image/minijie.png'></image>
+    </view>
+  </view>
+  <block wx:for="{{ aboutData }}" wx:key="index">
+    <view class='about_contact' data-index='{{ index }}' bindtap='selectOne'>
+      <view class='about_contact_explain'>
+        <text>{{ item.explain }}</text>
+        <view class='about_contact_explain_surprise'>
+           <text>{{ item.surprise }}</text>
+        </view>
+      </view>
+      <view class='about_contact_content'>
+        <text>{{ item.content }}</text>
+      </view>
+    </view>
+  </block>
+  <view class='about_box' style='{{ styleValue }}'>
+    <view class='about_box_close'>
+      <view class='about_box_close_image' bindtap='closeFn'>
+        <image src='./image/close.svg' ></image>
+      </view>
+    </view>
+    <view class='about_box_title'>
+    <text>Hi,很开心等到你的到来~.~</text>
+    </view>
+    <view class='about_box_describe'>
+      <text>我是小程序的作者，我叫小黑同学，英文名字minijie。此项目现处于开发阶段，小程序可能有一些不足之处，有问题可以联系我！由于自己的技术和时间问题,有许多考虑不到的，希望多多包涵，喜欢的点点星星！感谢~.~</text>
+    </view>
+  </view>
+  <view class='about_tips'>
+      <text>温馨提示：此项目仅供学习使用，请不要用于商业！谢谢配合!</text>
+  </view>
+</view>

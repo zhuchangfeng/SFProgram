@@ -1,0 +1,64 @@
+<!--component/dynamicList/dynamicList.wxml-->
+<view class='dynamicList'>
+  <!-- 用户头像 -->
+  <view class='dynamicList_user'>
+    <image src='{{ dynamicValue.avatarUrl }}'></image>
+  </view>
+  <!-- 用户头像 end-->
+  <!-- 内容 -->
+  <view class='dynamicList_content'>
+    <!-- 用户昵称、行为、时间 -->
+    <view class='dynamicList_content_name'>
+      <view class='dynamicList_content_name_behavior'>
+        <text class='tC' style='margin-right: 10rpx;'>{{ dynamicValue.nickName }}</text>
+        <text>{{ dynamicValue.eventType }}</text>
+      </view>
+      <view class='dynamicList_content_time'>
+        <text>{{ dynamicValue.timeValue }}</text>
+      </view>
+    </view>
+    <!-- 用户昵称、行为、时间 end-->
+    <view class='dynamicList_flexBox'>
+      <view class='dynamicList_flexBox_l' wx:if="{{ dynamicValue.followNumber!=undefined }}">
+        <text>{{ dynamicValue.title[0]}}</text>
+      </view>
+      <view class='dynamicList_flexBox_r'>
+        <!-- 用户问题 -->
+        <view class="dynamicList_content_problem {{ dynamicValue.followNumber!=undefined?'Oline':'mb10' }}">
+          <text>{{ dynamicValue.title }}</text>
+        </view>
+        <!-- 用户问题 end-->
+        <!-- 用户回复 -->
+        <!-- THline -->
+        <view class="dynamicList_content_describe {{ dynamicValue.followNumber!=undefined?'Oline':'mb10 THline p10' }}">
+          <text>{{ dynamicValue.answer }}</text>
+        </view>
+        <view class='dynamicList_content_image mb10' wx:if="{{ dynamicValue.imgSrc!=undefined }}">
+            <image src='{{ dynamicValue.imgSrc }}'></image>
+        </view>
+        <!-- 用户回复 end-->
+      </view>
+    </view>
+    <!-- 点赞和评论 -->
+    <view class='dynamicList_content_vote'>
+      <view class='dynamicList_content_vote_agree mr10' wx:if="{{ dynamicValue.agreeNumber!=undefined }}">
+        <view class='dynamicList_content_vote_agree_num'>
+          <text>{{ dynamicValue.agreeNumber }}</text> 赞同
+        </view>
+      </view>
+      <text wx:if="{{ dynamicValue.agreeNumber!=undefined||dynamicValue.commentNumber!=undefined  }}">·</text>
+      <view class='dynamicList_content_vote_comment ml10 mr10' wx:if="{{ dynamicValue.commentNumber!=undefined }}">
+        <view class='dynamicList_content_vote_comment_num'>
+          <text>{{ dynamicValue.commentNumber }}</text> 评论
+        </view>
+      </view>
+      <view class='dynamicList_content_vote_follow'  wx:if="{{ dynamicValue.followNumber!=undefined }}">
+        <view class='dynamicList_content_vote_follow_num'>
+          <text>{{ dynamicValue.followNumber }}</text> 关注
+        </view>
+      </view>
+    </view>
+    <!-- 点赞和评论 end-->
+  </view>
+  <!-- 内容 end-->
+</view>

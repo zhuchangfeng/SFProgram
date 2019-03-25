@@ -1,0 +1,79 @@
+<!--pages/homePage/homePage.wxml-->
+<view class='homePage'>
+  <!-- 导航栏 -->
+  <navigation title="{{ userInfo.nickName }}" top="{{ scrollTop }}" bgColor="transparent" editValue></navigation>
+  <!-- 导航栏 end-->
+  <view class='homePage_userBox'>
+    <!-- 用户信息 -->
+    <view class='homePage_userBox_flex'>
+      <view class='homePage_userBox_honor'>
+        <view class='homePage_userBox_honor_item'>
+          <view class='homePage_userBox_honor_item_image'>
+            <image src='./image/gold.svg'></image>
+          </view>
+          <text>1</text>
+        </view>
+        <view class='homePage_userBox_honor_item'>
+          <view class='homePage_userBox_honor_item_image'>
+            <image src='./image/silver.svg'></image>
+          </view>
+          <text>0</text>
+        </view>
+        <view class='homePage_userBox_honor_item'>
+          <view class='homePage_userBox_honor_item_image'>
+            <image src='./image/bronze.svg'></image>
+          </view>
+          <text>1</text>
+        </view>
+      </view>
+      <view class='homePage_userBox_user'>
+        <image src='{{ userInfo.avatarUrl }}'></image>
+      </view>
+    </view>
+    <view class='homePage_userBox_info'>
+      <view class='homePage_userBox_info_item'>
+        <text>声望</text>
+        <text>0</text>
+      </view>
+      <view class='homePage_userBox_info_item'>
+        <text>关注</text>
+        <text>0</text>
+      </view>
+      <view class='homePage_userBox_info_item'>
+        <text>粉丝</text>
+        <text>0</text>
+      </view>
+    </view>
+    <!-- 用户信息 end-->
+    <!-- 用户详细资料 -->
+    <view class='homePage_detailed'>
+      <view class='homePage_detailed_flex tC' bindtap='goDetailed'>
+        <text>详细资料</text>
+      </view>
+      <view class='homePage_detailed_flex Oline'>
+        <text class='Oline'>前端小白(* *)会写点vue和小程序</text>
+      </view>
+    </view>
+    <!-- 用户详细资料 end-->
+    <!-- 用户功能 -->
+    <view class='homePage_my'>
+      <block wx:for="{{ myData }}" wx:key="index">
+        <view class='homePage_my_flex'>
+          <text>{{ item.text }}</text>
+          <text class='tC'>{{ item.num }}</text>
+        </view>
+      </block>
+    </view>
+    <!-- 用户功能 end-->
+    <!--  我的动态-->
+    <view class='homePage_my_dynamic'>
+      <view class='homePage_my_dynamic_title'>
+        <text>我的动态</text>
+      </view>
+      <block wx:for="{{ dynamicData }}" wx:key="index">
+        <dynamicList dynamicValue="{{ item }}"></dynamicList>
+      </block>
+    </view>
+    <!--  我的动态 end-->
+  </view>
+</view>

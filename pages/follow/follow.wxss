@@ -1,0 +1,91 @@
+/* pages/follow/follow.wxss */
+
+.follow {
+  width: 100%;
+  min-height: 100%;
+  background-color: #fff;
+}
+
+.follow .follow_title {
+  display: flex;
+  text-align: center;
+  width: 100%;
+  position: fixed;
+  top: 220rpx;
+  background-color: #fff;
+  z-index: 1;
+}
+
+.follow_title .follow_title_item {
+  flex: 1;
+  padding: 25rpx 0;
+  border-bottom: 2px solid transparent;
+  color: #989899;
+}
+
+.follow_title_item.hover {
+  border-bottom: 2px solid #000;
+  color: #000;
+}
+
+.follow .follow_box {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.follow_box .follow_box_flex {
+  width: 500%;
+  height: 100%;
+  display: flex;
+  transition: all 0.3s ease-in;
+}
+
+.follow_box_flex .follow_box_flex_item {
+  width: 100%;
+  height: 100%;
+}
+
+.follow_box_flex_item .follow_box_flex_item_box {
+  display: flex;
+  align-items: center;
+  padding: 20rpx 40rpx;
+  box-sizing: border-box;
+  justify-content: space-between;
+}
+
+.follow_box_flex_item_box .follow_box_flex_item_box_image {
+  flex-basis: 120rpx;
+  height: 120rpx;
+  margin-right: 20rpx;
+  overflow: hidden;
+}
+.follow_box_flex_item_box_image.radiusCircular{
+  border-radius: 50%;
+}
+.follow_box_flex_item_box_image.radius5px{
+  border-radius: 5px;
+}
+.follow_box_flex_item_box_image image {
+  width: 100%;
+  height: 100%;
+}
+
+.follow_box_flex_item_box .follow_box_flex_item_box_name {
+  flex: 1;
+}
+
+.follow_box_flex_item_box_name .follow_box_flex_item_box_name_text {
+  font-size: 34rpx;
+  margin-bottom: 10rpx;
+}
+
+.follow_box_flex_item_box_name .follow_box_flex_item_box_name_describe {
+  font-size: 30rpx;
+  color: #989899;
+}
+
+.follow_box_flex_item_box .follow_box_flex_item_box_follow {
+  font-size: 28rpx;
+  color: #989899;
+}

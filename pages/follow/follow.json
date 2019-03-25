@@ -1,0 +1,6 @@
+{
+    "navigationBarTitleText": "我的关注",
+      "usingComponents": {
+        "navigation": "/component/navigation/navigation"
+      }
+}

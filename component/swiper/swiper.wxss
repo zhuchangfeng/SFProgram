@@ -1,0 +1,32 @@
+/* component/swiper/swiper.wxss */
+@import "../../app.wxss";
+
+.swiper_box .swiper_box_image {
+  position: relative;
+}
+
+.swiper_box_image image {
+  border-radius: 10rpx;
+  overflow: hidden;
+}
+
+.swiper_box .swiper_box_title {
+  position: absolute;
+  bottom: 0;
+  color: #fff;
+  font-weight: bold;
+  font-size: 36rpx;
+  width: calc(100% - 19.5rpx);
+  left: 0;
+  height: 100rpx;
+  background-color: hsla(0, 0%, 74%, 0.39);
+  display: flex;
+  align-items: center;
+  border-bottom-left-radius: 10rpx;
+  border-bottom-right-radius: 10rpx;
+  overflow: hidden;
+}
+
+.swiper_box_title text {
+  margin-left: 20rpx;
+}

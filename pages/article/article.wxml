@@ -1,0 +1,9 @@
+<!--pages/article/article.wxml-->
+<view class='article'>
+  <navigation title="热门文章" searchValue></navigation>
+  <view class='article_box'>
+    <block wx:for="{{ articleData }}" wx:key="index">
+      <article dataValue="{{ item }}"></article>
+    </block>
+  </view>
+</view>

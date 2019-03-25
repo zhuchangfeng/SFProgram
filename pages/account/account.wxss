@@ -1,0 +1,43 @@
+/* pages/account/account.wxss */
+
+.account {
+  width: 100%;
+  min-height: 100%;
+  background-color: #fff;
+  padding: 220rpx 0 0 0;
+  box-sizing: border-box;
+}
+
+.account .account_item {
+  padding: 30rpx 40rpx;
+  border-bottom: 1px solid #f1f1f1;
+  display: flex;
+  justify-content: space-between;
+}
+.account_item_info .account_item_info_describe {
+  font-size: 30rpx;
+  color: #989899;
+  margin-top: 5rpx;
+}
+
+.account_item .account_info_verification {
+  font-size: 30rpx;
+  color: #989899;
+}
+.account_info_verification .green{
+  color: #24a071
+}
+.account .account_community{
+  margin-top: 40rpx;
+}
+.account_community .account_community_title{
+  padding-left: 40rpx;
+}
+.account_community .account_community_item{
+  display: flex;
+  align-items: center;
+  padding: 40rpx 40rpx;
+  justify-content: space-between;
+  border-bottom: 1px solid #f1f1f1;
+  font-size: 32rpx;
+}

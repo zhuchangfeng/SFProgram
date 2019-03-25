@@ -1,0 +1,66 @@
+<!--pages/index/index.wxml-->
+<view class='index' style="padding-top:{{ paddingValue }}px">
+  <view class='index_title' id='indexTitle'>
+    <view class='index_box'>
+      <view class='index_box_input' bindtap='showSearch'>
+        <view class='index_box_input_image'>
+          <image src='./image/search.svg'></image>
+        </view>
+        <view class='index_box_input_text'>
+          <text>告诉我你想搜索的内容</text>
+        </view>
+      </view>
+      <view class='index_box_add' bindtap='showAdd'>
+        <image src='./image/add.svg'></image>
+      </view>
+    </view>
+    <view class='index_tab'>
+      <block wx:for="{{ tabData }}" wx:key="index">
+        <view class="index_tab_item {{ index==indexValue?'hover':'' }}" bindtap='selectOne' data-index='{{ index }}'>
+          <view class='index_tab_item_text'>
+            <text>{{ item.text }}</text>
+          </view>
+        </view>
+      </block>
+      <view class='index_tab_hover' style='left: {{indexValue*33.33+11.365}}%'></view>
+    </view>
+  </view>
+  <!--  搜索和选项卡-->
+  <view class='index_swiper'>
+    <swiper bindchange="changSwiper" current="{{ indexValue }}" style="height:calc(100vh - {{paddingValue}}px)">
+      <swiper-item>
+        <scroll-view scroll-y style="height:inherit">
+          <view class='index_swiper_box' id="subscribe">
+            <homeModule></homeModule>
+            <homeModule></homeModule>
+            <homeModule></homeModule>
+            <homeModule></homeModule>
+            <homeModule></homeModule>
+            <homeModule></homeModule>
+          </view>
+        </scroll-view>
+      </swiper-item>
+      <swiper-item>
+        <scroll-view scroll-y style="height:inherit">
+          <view class='index_swiper_box' id="hot">
+            <homeModule></homeModule>
+            <homeModule></homeModule>
+          </view>
+        </scroll-view>
+      </swiper-item>
+      <swiper-item>
+        <scroll-view scroll-y style="height:inherit">
+          <view class='index_swiper_box' id="newest">
+            <homeModule></homeModule>
+            <homeModule></homeModule>
+            <homeModule></homeModule>
+            <homeModule></homeModule>
+            <homeModule></homeModule>
+            <homeModule></homeModule>
+          </view>
+        </scroll-view>
+      </swiper-item>
+    </swiper>
+  </view>
+  <!--  搜索和选项卡 end-->
+</view>

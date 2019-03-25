@@ -1,0 +1,74 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/pageDetails/pageDetails",
+    "pages/interlocution/interlocution",
+    "pages/find/find",
+    "pages/ranking/ranking",
+    "pages/follow/follow",
+    "pages/specialDetails/specialDetails",
+    "pages/forum/forum",
+    "pages/detailed/detailed",
+    "pages/homePage/homePage",
+    "pages/more/more",
+    "pages/editor/editor",
+    "pages/dynamic/dynamic",
+    "pages/special/special",
+    "pages/answer/answer",
+    "pages/article/article",
+    "pages/community/community",
+    "pages/opinion/opinion",
+    "pages/submission/submission",
+    "pages/browse/browse",
+    "pages/account/account",
+    "pages/setUp/setUp",
+    "pages/login/login",
+    "pages/about/about",
+    "pages/Information/Information",
+    "pages/search/search",
+    "pages/news/news",
+    "pages/add/add"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#24a071",
+    "navigationBarTitleText": "SF思否",
+    "navigationBarTextStyle": "while"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "阅读",
+        "iconPath": "image/read.png",
+        "selectedIconPath": "image/read_h.png"
+      },
+      {
+        "pagePath": "pages/find/find",
+        "text": "发现",
+        "iconPath": "image/find.png",
+        "selectedIconPath": "image/find_h.png"
+      },
+      {
+        "pagePath": "pages/forum/forum",
+        "text": "讲堂",
+        "iconPath": "image/live.png",
+        "selectedIconPath": "image/live_h.png"
+      },
+      {
+        "pagePath": "pages/news/news",
+        "text": "消息",
+        "iconPath": "image/news.png",
+        "selectedIconPath": "image/news_h.png"
+      },
+      {
+        "pagePath": "pages/more/more",
+        "text": "更多",
+        "iconPath": "image/more.png",
+        "selectedIconPath": "image/more_h.png"
+      }
+    ],
+    "color": "#bfbfbf",
+    "selectedColor": "#24a071"
+  }
+}

@@ -1,0 +1,40 @@
+/* component/navigation/navigation.wxss */
+
+.navigation {
+  width: 100%;
+  padding-top: 40rpx;
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  padding-bottom: 30rpx;
+  padding-right: 40rpx;
+  padding-left: 40rpx;
+  box-sizing: border-box;
+  transition:  all .3s ease-in;
+}
+.navigation .navigation_box{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navigation_box .navigation_box_return {
+  width: 50rpx;
+  height: 50rpx;
+  transform: rotate(180deg);
+}
+
+.navigation_box_return image {
+  width: 100%;
+  height: 100%;
+}
+.navigation_box .navigation_box_image{
+   width: 50rpx;
+  height: 50rpx;
+}
+.navigation_box_image image{
+  width: 100%;
+  height: 100%;
+}
+.navigation_box .narrow{
+  transform: scale(0.8,0.8);
+}

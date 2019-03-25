@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "用户排行榜",
+  "usingComponents": {
+    "navigation": "/component/navigation/navigation"
+  }
+}

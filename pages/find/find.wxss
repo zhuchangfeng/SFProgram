@@ -1,0 +1,141 @@
+/* pages/find/find.wxss */
+
+.find {
+  background-color: #fff;
+  width: 100%;
+}
+
+.find .find_box {
+  padding-top: 106px;
+}
+
+.find .find_content {
+  padding: 20rpx 0 20rpx 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.find_content .find_content_swiper {
+  width: 100%;
+  height: 370rpx;
+}
+
+.find .find_searchBar {
+  width: 100%;
+  padding: 80rpx 20rpx;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+}
+
+.find_searchBar .find_searchBar_item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+}
+
+.find_searchBar_item .find_searchBar_item_icon {
+  width: 100rpx;
+  height: 100rpx;
+  margin-bottom: 40rpx;
+}
+
+.find_searchBar_item_icon image {
+  width: 100%;
+  height: 100%;
+}
+
+.find_searchBar_item .find_searchBar_item_text {
+  font-size: 32rpx;
+}
+
+.find .find_title_box {
+  padding: 0 35rpx;
+  box-sizing: border-box;
+  margin-bottom: 70rpx;
+}
+
+.find_box .find_title {
+  padding: 0 35rpx;
+  box-sizing: border-box;
+  margin-bottom: 70rpx;
+  display: flex;
+  justify-content: space-between;
+}
+
+.find_title .find_title_text {
+  border-left: 10rpx solid #24a071;
+  padding-left: 30rpx;
+  font-size: 34rpx;
+  font-weight: bold;
+}
+
+.find_title .find_title_all {
+  font-size: 32rpx;
+  color: #24a071;
+}
+
+.find_box .find_special {
+  padding: 0 35rpx;
+  box-sizing: border-box;
+  display: flex;
+  width: 100%;
+  padding-bottom: 70rpx;
+}
+
+.find_special .find_special_box {
+  flex: 1;
+}
+
+.find_special .find_special_box:first-child {
+  margin-right: 17.5rpx;
+}
+
+.find_special_box .find_special_box_image {
+  width: 100%;
+  height: 200rpx;
+  border-radius: 20rpx;
+  overflow: hidden;
+  margin-bottom: 20rpx;
+}
+
+.find_special_box_image image {
+  width: 100%;
+  height: 100%;
+}
+
+.find_special_box .find_special_box_text {
+  font-size: 30rpx;
+}
+
+.find .find_community {
+  padding: 0 35rpx;
+  box-sizing: border-box;
+  width: 100%;
+  padding-bottom: 70rpx;
+}
+
+.find_community .find_community_image {
+  width: 100%;
+  height: 370rpx;
+  border-radius: 20rpx;
+  overflow: hidden;
+}
+
+.find_community_image image {
+  width: 100%;
+  height: 100%;
+}
+
+.find .find_recommendation {
+  padding: 0 35rpx;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.find .find_answer {
+  padding: 0 35rpx;
+  box-sizing: border-box;
+  width: 100%;
+}

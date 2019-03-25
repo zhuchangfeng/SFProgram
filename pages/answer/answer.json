@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "热门问答",
+  "usingComponents": {
+    "navigation": "/component/navigation/navigation",
+    "article": "/component/article/article"
+  }
+}

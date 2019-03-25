@@ -1,0 +1,15 @@
+<!--component/swiper/swiper.wxml-->
+<swiper class='H100' previous-margin="{{previousMargin}}rpx" next-margin="{{nextMargin}}rpx" autoplay="true" circular="true">
+  <block wx:for="{{ imgData }}" wx:key="index">
+    <swiper-item>
+      <view class='swiper_box whole100 '>
+        <view class='swiper_box_image whole100'>
+          <image src="{{ item.bannerUrl }}" class='whole100'></image>
+        </view>
+        <view class='swiper_box_title'>
+            <text>{{ item.title }}</text>
+        </view>
+      </view>
+    </swiper-item>
+  </block>
+</swiper>

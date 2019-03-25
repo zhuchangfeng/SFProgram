@@ -1,0 +1,33 @@
+<!--pages/account/account.wxml-->
+<view class='account'>
+  <navigation title="账号与安全"></navigation>
+  <block wx:for="{{ accountData }}" wx:key="index">
+    <view class='account_item'>
+      <view class='account_item_info'>
+        <text>{{ item.text }}</text>
+        <view class='account_item_info_describe'>
+          <text>{{ item.info }}</text>
+        </view>
+      </view>
+      <view class='account_info_verification' wx:if="{{ item.isVerification!=undefined }}">
+        <text wx:if="{{ item.isVerification }}" class='green'>已验证</text>
+        <text wx:else>未验证</text>
+      </view>
+    </view>
+  </block>
+  <view class='account_community'>
+    <view class='account_community_title'>
+      <text>社区账号</text>
+    </view>
+    <block wx:for="{{ communityData }}" wx:key="index">
+      <view class='account_community_item'>
+        <view class='account_community_item_name'>
+          <text>{{ item.text }}</text>
+        </view>
+        <view class='account_community_item_switch'>
+          <switch type='switch' checked="{{ item.isChecked }}" bindchange='switchChange' data-index='{{ index }}'></switch>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>

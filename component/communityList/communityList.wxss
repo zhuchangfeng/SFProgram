@@ -1,0 +1,43 @@
+/* component/communityList/communityList.wxss */
+@import "../../app.wxss";
+
+.communityList {
+  display: flex;
+  align-items: center;
+  padding: 40rpx 0;
+  height: 180rpx;
+}
+
+.communityList .communityList_image {
+  flex-basis: 260rpx;
+  height: 180rpx;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.communityList_image image {
+  width: 100%;
+  height: 100%;
+}
+
+.communityList .communityList_box {
+  margin-left: 30rpx;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+  padding: 5rpx 0;
+  flex: 1;
+  box-sizing: border-box;
+}
+
+.communityList_box .communityList_box_title {
+  font-size: 36rpx;
+}
+
+.communityList_box .communityList_box_details {
+  display: flex;
+  align-items: center;
+  font-size: 30rpx;
+  color: #989899;
+}

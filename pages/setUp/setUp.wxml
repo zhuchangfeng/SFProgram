@@ -1,0 +1,22 @@
+<!--pages/setUp/setUp.wxml-->
+<view class='setUp'>
+  <!-- 
+    title:标题
+ -->
+  <navigation title="设置"></navigation>
+  <view class='setUp_box'>
+    <block wx:for="{{ functionData }}" wx:key="index">
+      <view class='setUp_function' bindtap='selectOne' data-index='{{ index }}'>
+        <view class='setUp_function_text'>
+          <text>{{ item.text }}</text>
+        </view>
+        <view class='setUp_function_describe'>
+          <text>{{ item.size }}</text>
+          <view class='setUp_function_describe_size' wx:if="{{ item.size!=undefined }}">
+            <text>MB</text>
+          </view>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>

@@ -1,0 +1,26 @@
+<!--pages/more/more.wxml-->
+<view class='more_box'>
+  <view class='more_user' bindtap='selectOperate'>
+    <view class='more_user_info'>
+      <view class='more_user_info_name'>
+        <text>{{ userInfo.nickName }}</text>
+      </view>
+      <view class='more_user_info_describe'>
+        <text>{{ userInfo.infoValue }}</text>
+      </view>
+    </view>
+    <view class='more_user_info_image'>
+      <image src='{{ userInfo.avatarUrl }}'></image>
+    </view>
+  </view>
+  <view class='more_box_list'>
+    <view class='more_box_list_item' wx:for="{{ listData }}" wx:key="index" bindtap='selectOne' data-index='{{ index }}'>
+      <view class='more_box_list_item_text'>
+        <text>{{ item.describe }}</text>
+      </view>
+      <view class='more_box_list_item_image'>
+        <image src='{{ item.imageSrc }}'></image>
+      </view>
+    </view>
+  </view>
+</view>

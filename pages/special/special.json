@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "专题推荐",
+  "usingComponents": {
+    "navigation": "/component/navigation/navigation",
+    "thematicList":"/component/thematicList/thematicList"
+  }
+}

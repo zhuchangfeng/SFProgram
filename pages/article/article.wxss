@@ -1,0 +1,13 @@
+/* pages/article/article.wxss */
+
+.article {
+  width: 100%;
+  min-height: 100%;
+  background-color: #fff;
+  padding: 280rpx 0 0 0;
+  box-sizing: border-box;
+}
+.article .article_box{
+  padding:  0 40rpx;
+  box-sizing: border-box;
+}

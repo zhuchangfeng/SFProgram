@@ -1,0 +1,6 @@
+{
+    "navigationBarTitleText": "阅读",
+    "usingComponents": {
+      "homeModule": "/component/homeModule/homeModule"
+    }
+}

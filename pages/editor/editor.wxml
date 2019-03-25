@@ -1,0 +1,94 @@
+<!--pages/editor/editor.wxml-->
+<view class='editor'>
+  <view class='editor_titleBox'>
+    <view class='editor_titleBox_close' bindtap='callBack'>
+      <image src='./image/close.svg'></image>
+    </view>
+    <view class='editor_titleBox_ok tC'>
+      <text>完成</text>
+    </view>
+  </view>
+  <view class='editor_box'>
+    <!-- 用户头像 -->
+    <view class='editor_box_userBox'>
+      <view class='editor_box_userBox_image'>
+        <image src='{{ userInfo.avatarUrl }}'></image>
+        <view class='editor_box_userBox_upload'>
+          <image src='./image/camera.svg'></image>
+        </view>
+      </view>
+    </view>
+    <!-- 用户头像 end-->
+    <!-- 用户信息 -->
+    <block wx:for="{{ userData }}" wx:key="index">
+      <view class='editor_box_list'>
+        <view class='editor_box_list_image'>
+          <image src='{{ item.imageSrc }}'></image>
+        </view>
+        <view class='editor_box_list_input'>
+          <input placeholder="{{ item.placeholderValue }}" disabled="{{ item.isDisabled }}" value="{{ item.value }}"></input>
+        </view>
+      </view>
+    </block>
+    <!-- 用户信息 end-->
+    <!-- 用户擅长技能 -->
+    <view class='editor_label'>
+      <view class='editor_label_image'>
+        <image src='./image/code.svg'></image>
+      </view>
+      <view class='editor_label_box'>
+        <view class='editor_label_box_item'>
+          <view class='editor_label_box_item_text'>
+            <text>微信小程序</text>
+          </view>
+          <view class='editor_label_box_item_text'>
+            <text>微信小程序</text>
+          </view>
+          <view class='editor_label_box_item_text'>
+            <text>微信小程序</text>
+          </view>
+          <view class='editor_label_box_item_text'>
+            <text>微信小程序</text>
+          </view>
+        </view>
+        <view class='editor_label_box_add'>
+          <view class='editor_label_box_add_image'>
+            <image src='./image/add.svg'></image>
+          </view>
+          <text class='tC'>擅长技能</text>
+        </view>
+      </view>
+    </view>
+    <!-- 用户擅长技能 end-->
+    <!-- 用户学习经历、工作经历、项目经历 -->
+    <block wx:for="{{ experienceValue }}" wx:key="index">
+      <view class='editor_item'>
+        <view class='editor_item_image'>
+          <image src='{{ item.imgSrc }}'></image>
+        </view>
+        <view class='editor_item_box'>
+          <block wx:for="{{ item.aggregate }}" wx:key="index">
+            <view class='editor_item_content'>
+              <view class='editor_item_content_delete'>
+                <image src='./image/delete.svg'></image>
+              </view>
+              <view class='editor_item_content_describe'>
+                <text>{{ item.title }}</text>
+                <view class='editor_item_content_describe_text'>
+                  <text>{{ item.describe }}</text>
+                </view>
+              </view>
+            </view>
+          </block>
+          <view class='editor_item_delete'>
+            <view class='editor_item_delete_image'>
+              <image src='./image/add.svg'></image>
+            </view>
+            <text class='tC'>{{ item.title }}</text>
+          </view>
+        </view>
+      </view>
+    </block>
+    <!-- 用户学习经历、工作经历、项目经历 end-->
+  </view>
+</view>

@@ -1,0 +1,16 @@
+<!--component/titleBar/titleBar.wxml-->
+<view class='titleBar_box'>
+  <view class='titleBar_content' id='titleBar'>
+    <view class='titleBar_bar' id="bar">
+      <view class='titleBar_bar_search' bindtap='showSearch'>
+        <image src='./image/search.svg'></image>
+      </view>
+      <view class='titleBar_bar_more' bindtap='showAdd'>
+        <image src='./image/add.svg'></image>
+      </view>
+    </view>
+    <view class='titleBar_title' id="title" style=" font-size:{{ defaultFace+'px'}};height:{{ titleBar+'px'}};margin-top:{{ marginTop+'px' }}">
+      <text>{{ title }}</text>
+    </view>
+  </view>
+</view>

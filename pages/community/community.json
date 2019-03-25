@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "社区活动",
+  "usingComponents": {
+    "navigation": "/component/navigation/navigation",
+    "communityList": "/component/communityList/communityList"
+  }
+}

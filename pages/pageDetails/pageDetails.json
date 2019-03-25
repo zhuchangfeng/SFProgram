@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "goodCourses": "/component/goodCourses/goodCourses"
+  }
+}

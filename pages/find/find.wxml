@@ -1,0 +1,103 @@
+<!--pages/find/find.wxml-->
+<view class='find'>
+  <titleBar title="发现" top="{{ scrollTop }}"></titleBar>
+  <view class='find_box'>
+    <!-- 发现的轮播图 -->
+    <view class='find_content'>
+      <view class='find_content_swiper'>
+        <swipeComponentsr></swipeComponentsr>
+      </view>
+    </view>
+    <!-- 发现的轮播图 end-->
+    <!-- 发现的功能栏 -->
+    <view class='find_searchBar'>
+      <block wx:for="{{ barData }}" wx:key="index">
+        <view class='find_searchBar_item' bindtap='selectOne' data-index='{{ index }}'>
+          <view class='find_searchBar_item_icon'>
+            <image src='{{ item.imgSrc }}'></image>
+          </view>
+          <view class='find_searchBar_item_text'>
+            <text>{{ item.describe }}</text>
+          </view>
+        </view>
+      </block>
+    </view>
+    <!-- 发现的功能栏 end-->
+    <!-- 专题推荐 -->
+    <view class='find_title'>
+      <view class='find_title_text'>
+        <text>专题推荐</text>
+      </view>
+      <view class='find_title_all' bindtap='specialFn'>
+        <text>查看全部</text>
+      </view>
+    </view>
+    <view class='find_special'>
+      <view class='find_special_box' bindtap='goSpecial'>
+        <view class='find_special_box_image'>
+          <image src='https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2559393669,66231354&fm=27&gp=0.jpg'></image>
+        </view>
+        <view class='find_special_box_text'>
+          <text>带你入门 JavaScript ES6</text>
+        </view>
+      </view>
+      <view class='find_special_box'>
+        <view class='find_special_box_image'>
+          <image src='https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=3160491547,3791290848&fm=26&gp=0.jpg'></image>
+        </view>
+        <view class='find_special_box_text'>
+          <text>带你入门Java</text>
+        </view>
+      </view>
+    </view>
+    <!-- 专题推荐 end-->
+    <!-- 社区活动 -->
+    <view class='find_title'>
+      <view class='find_title_text'>
+        <text>社区活动</text>
+      </view>
+      <view class='find_title_all' bindtap='communityFn'>
+        <text>查看全部</text>
+      </view>
+    </view>
+    <view class='find_community'>
+      <view class='find_community_image'>
+        <image src='https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2012138195,1836959800&fm=26&gp=0.jpg'></image>
+      </view>
+    </view>
+    <!-- 社区活动 end-->
+    <!-- 热门文章 -->
+    <view class='find_title'>
+      <view class='find_title_text'>
+        <text>热门文章</text>
+      </view>
+      <view class='find_title_all' bindtap='articleFn'>
+        <text>查看全部</text>
+      </view>
+    </view>
+    <view class='find_recommendation'>
+      <!-- 
+        dataValue:请求数据
+     -->
+      <block wx:for="{{ articleData }}" wx:key="index">
+        <article dataValue="{{item}}"></article>
+      </block>
+    </view>
+    <!-- 热门文章 end-->
+    <!-- 热门问答 -->
+    <view class='find_title'>
+      <view class='find_title_text'>
+        <text>热门问答</text>
+      </view>
+      <view class='find_title_all' bindtap='answerFn'>
+        <text>查看全部</text>
+      </view>
+    </view>
+    <view class='find_answer'>
+      <block wx:for="{{ questionData }}" wx:key="index">
+        <article dataValue="{{item}}"></article>
+      </block>
+    </view>
+    <!-- 热门问答 end-->
+  </view>
+</view>

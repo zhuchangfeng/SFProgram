@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "信息推送",
+  "usingComponents": {
+    "navigation": "/component/navigation/navigation"
+  }
+}

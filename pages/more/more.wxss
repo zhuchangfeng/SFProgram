@@ -1,0 +1,62 @@
+/* pages/more/more.wxss */
+
+.more_box {
+  width: 100%;
+  padding: 140rpx 50rpx 70rpx 50rpx;
+  box-sizing: border-box;
+  background-color: #fff;
+  min-height: 100%;
+}
+
+.more_box .more_user {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.more_user .more_user_info_name {
+  font-size: 60rpx;
+  margin-bottom: 30rpx;
+}
+
+.more_user .more_user_info_describe {
+  color: rgb(158, 158, 158);
+  font-size: 35rpx;
+}
+
+.more_box .more_user_info_image {
+  width: 140rpx;
+  height: 140rpx;
+  border-radius: 50%;
+  box-shadow: 0px 0px 5px 0px #ccc;
+  overflow: hidden;
+}
+
+.more_user_info_image image {
+  width: 100%;
+  height: 100%;
+}
+
+.more_box .more_box_list {
+  margin-top: 30rpx;
+}
+
+.more_box_list .more_box_list_item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #e2e2e2;
+  padding: 40rpx 0;
+  box-sizing: border-box;
+  font-size: 35rpx;
+}
+
+.more_box_list_item .more_box_list_item_image {
+  width: 50rpx;
+  height: 50rpx;
+}
+
+.more_box_list_item_image image {
+  width: 100%;
+  height: 100%;
+}
