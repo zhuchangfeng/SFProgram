@@ -17,11 +17,20 @@ Page({
     ],
     indexValue: 0, //索引值默认是0
     paddingValue: null, // 填充的值
-    subscribe: null, //我的订阅的高度
-    hot: null, //近期热门的高度
-    newest: null, // 最新内容
-    swiperHeight: null, // swiper的高度
     windowHeight: null, //窗口可用高度
+    containerData: [{
+        name: 'subscribe',
+        data: [1, 2, 3]
+      },
+      {
+        name: 'hot',
+        data: [1, 2, 3, 5, 6, 5, 6, 5]
+      },
+      {
+        name: 'newest',
+        data: [1, 2, 3, 6, 5]
+      }
+    ]
   },
 
   /**
@@ -59,8 +68,7 @@ Page({
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
-  onPullDownRefresh: function() {
-  },
+  onPullDownRefresh: function() {},
 
   /**
    * 页面上拉触底事件的处理函数
@@ -82,23 +90,6 @@ Page({
     this.setData({
       indexValue: e.currentTarget.dataset.index,
     });
-    switch (this.data.indexValue) {
-      case 0:
-        this.setData({
-          swiperHeight: this.data.subscribe,
-        });
-        break;
-      case 1:
-        this.setData({
-          swiperHeight: this.data.hot,
-        });
-        break;
-      case 2:
-        this.setData({
-          swiperHeight: this.data.newest,
-        });
-        break;
-    }
   },
   queryMultipleNodes: function() {
     var query = wx.createSelectorQuery();
@@ -109,53 +100,13 @@ Page({
         paddingValue: res.height
       });
     }).exec();
-    query.select('#subscribe').boundingClientRect(function(res) {
-      // 获取我的订阅的高度
-      that.setData({
-        subscribe: res.height
-      });
-    }).exec(function(res) {
-      that.setData({
-        swiperHeight: res[1].height
-      });
-    });
-    query.select('#hot').boundingClientRect(function(res) {
-      // 获取近期热门的高度
-      that.setData({
-        hot: res.height
-      });
-    }).exec();
-    query.select('#newest').boundingClientRect(function(res) {
-      // 获取到最新内容的高度
-      that.setData({
-        newest: res.height
-      });
-    }).exec();
   },
   changSwiper: function(res) {
-    this.setData({
-      // 获取到当前侧滑的索引
-      indexValue: res.detail.current,
-    });
     if (res.detail.source == "touch") {
-      switch (this.data.indexValue) {
-        // 根据索引设置高度
-        case 0:
-          this.setData({
-            swiperHeight: this.data.subscribe
-          });
-          break;
-        case 1:
-          this.setData({
-            swiperHeight: this.data.hot
-          });
-          break;
-        case 2:
-          this.setData({
-            swiperHeight: this.data.newest
-          });
-          break;
-      }
+      this.setData({
+        // 获取到当前侧滑的索引
+        indexValue: res.detail.current,
+      });
     }
   },
   getWindowH: function() {
@@ -179,6 +130,15 @@ Page({
     // 跳转到搜索页面
     wx.navigateTo({
       url: '/pages/search/search',
+    })
+  },
+  scrolltolower:function(res){
+    var index = res.currentTarget.dataset.index;
+    var data = [...this.data.containerData[index].data, ...[2, 5, 6, 8]]
+    var name = `containerData[${index}].data`;
+    console.log(name);
+    this.setData({
+      [name]: data
     })
   }
 })

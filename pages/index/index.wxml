@@ -28,38 +28,17 @@
   <!--  搜索和选项卡-->
   <view class='index_swiper'>
     <swiper bindchange="changSwiper" current="{{ indexValue }}" style="height:calc(100vh - {{paddingValue}}px)">
-      <swiper-item>
-        <scroll-view scroll-y style="height:inherit">
-          <view class='index_swiper_box' id="subscribe">
-            <homeModule></homeModule>
-            <homeModule></homeModule>
-            <homeModule></homeModule>
-            <homeModule></homeModule>
-            <homeModule></homeModule>
-            <homeModule></homeModule>
-          </view>
-        </scroll-view>
-      </swiper-item>
-      <swiper-item>
-        <scroll-view scroll-y style="height:inherit">
-          <view class='index_swiper_box' id="hot">
-            <homeModule></homeModule>
-            <homeModule></homeModule>
-          </view>
-        </scroll-view>
-      </swiper-item>
-      <swiper-item>
-        <scroll-view scroll-y style="height:inherit">
-          <view class='index_swiper_box' id="newest">
-            <homeModule></homeModule>
-            <homeModule></homeModule>
-            <homeModule></homeModule>
-            <homeModule></homeModule>
-            <homeModule></homeModule>
-            <homeModule></homeModule>
-          </view>
-        </scroll-view>
-      </swiper-item>
+      <block wx:for="{{ containerData }}" wx:key="container{{ index }}">
+        <swiper-item>
+          <scroll-view scroll-y style="height:inherit" bindscrolltolower="scrolltolower" data-index='{{ index }}'>
+            <view class='index_swiper_box' id="{{ item.name }}">
+              <block wx:for="{{ item.data }}" wx:key="item{{ index }}">
+                <homeModule></homeModule>
+              </block>
+            </view>
+          </scroll-view>
+        </swiper-item>
+      </block>
     </swiper>
   </view>
   <!--  搜索和选项卡 end-->
